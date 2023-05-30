@@ -1,0 +1,5 @@
+.vscode/
+.chroma_persist/
+venv/
+__pycache__/
+dev.config.ini
