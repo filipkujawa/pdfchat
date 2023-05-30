@@ -106,8 +106,9 @@ def main(path, clear_db, chunk_size, max_tokens, context_size):
 
         if question == "S":
             console.print("\n\n---\nCount: ", cc.collection.count(), "\n---\n\n\n")
-        if question == "Q":
-            return
+        elif question == "Q":
+            console.print("\n\n[bold red]Stopping...")
+            quit()
         else:
             console.print("[bold blue]Answer: ")
             with console.status(
