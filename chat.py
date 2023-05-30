@@ -99,13 +99,15 @@ def main(path, clear_db, chunk_size, max_tokens, context_size):
     )
     while True:
         console.print(
-            "\n\n\n[bold white]Ask a question or type [bold blue]'S'[bold white] for stats & more info",
+            "\n\n\n[bold white]Ask a question or type [bold blue]'S'[bold white] for stats & more info. ([bold red]Q[bold white] to quit)",
             highlight=False,
         )
         question = input("Question: ")
 
         if question == "S":
             console.print("\n\n---\nCount: ", cc.collection.count(), "\n---\n\n\n")
+        if question == "Q":
+            return
         else:
             console.print("[bold blue]Answer: ")
             with console.status(
